@@ -39,5 +39,5 @@ jobs:
         run: mvn clean package -DskipTests
       - name: Revisar la calidad del código con Sonarqube
         run: |
-          mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.qualitygate.wait=true -Dsonar.login=admin -Dsonar.password=Admin
+          mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.qualitygate.wait=true -Dsonar.login=admin -Dsonar.password=admin
   

@@ -13,7 +13,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '11'
-      - name: Construir con Maven
+      - name: Construir proyecto con Maven
         run: | 
           mvn clean package -DskipTests
           ls target/
@@ -37,7 +37,7 @@ jobs:
           distribution: "adopt"
       - name: Construir con Maven
         run: mvn clean package -DskipTests
-      - name: Revisar la calidad con Sonarqube
+      - name: Revisar la calidad del código con Sonarqube
         run: |
           mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.qualitygate.wait=true -Dsonar.login=admin -Dsonar.password=Admin
   
